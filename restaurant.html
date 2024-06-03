@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="rest.css">
+</head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.html">🍽️</a></div>
+            <input type="text" placeholder="блюдо или товар">
+            <button>Найти</button>
+            <!--<button>Укажите адрес доставки</button>-->
+            <button class="auth-button" onclick="openModal()">Авторизация</button>
+            <button id="theme-toggle">🌙</button>
+        </header>
+    
+        <div class="content">
+            <div class="sidebar">
+                <a href="#">Новинки</a>
+                <a href="#">Кинг Комбо</a>
+                <a href="#">Боксы</a>
+                <a href="#">На компанию</a>
+                <a href="#">Говядина</a>
+                <a href="#">Курица</a>
+                <a href="#">Рыба</a>
+                <a href="#">Острые</a>
+                <a href="#">Креветки</a>
+            </div>
+    
+            <div class="main-content">
+                <div class="restaurant-header">
+                    <img src="images/BurgerKing.jpg" alt="Бургер Кинг" width="150">
+                    <div>
+                        <h2>Бургер Кинг</h2>
+                        <p>⭐ 4.7 (200+)</p>
+                    </div>
+                </div>
+                <h2>Новинки</h2>
+                <div class="dishes">
+                    <div class="dish" data-name="Ангус Пармеджано" data-price="499,99₽">
+                        <img src="menu/burger.jpeg" alt="Новинка 1">
+                        <h3>Ангус Пармеджано</h3>
+                        <p class="price">499,99₽</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                    <div class="dish" data-name="Кинг Фри" data-price="114,99₽">
+                        <img src="menu/free.jpeg" alt="Новинка 2">
+                        <h3>Кинг Фри</h3>
+                        <p class="price">114,99₽</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                    <div class="dish" data-name="Клубничное мороженое" data-price="194,99₽">
+                        <img src="menu/ice.png" alt="Новинка 3">
+                        <h3>Клубничное мороженое</h3>
+                        <p class="price">194,99₽</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                    <div class="dish" data-name="Милк Шейк" data-price="164,99₽">
+                        <img src="menu/milk.png" alt="Новинка 3">
+                        <h3>Милк Шейк</h3>
+                        <p class="price">164,99₽</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                    <div class="dish" data-name="Пирожок с вишней" data-price="139,99₽">
+                        <img src="menu/piroshok.png" alt="Новинка 3">
+                        <h3>Пирожок с вишней</h3>
+                        <p class="price">139,99₽</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                    <div class="dish" data-name="Чикен Ролл" data-price="369,99₽">
+                        <img src="menu/roll.jpeg" alt="Новинка 3">
+                        <h3>Чикен Ролл</h3>
+                        <p class="price">369,99₽</p>
+                        <button class="add-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="cart">
+                <p>Ваша корзина</p>
+                <div class="cart-items"></div>
+                <p class="cart-total">Итого: 0₽</p>
+                <button class="order-button"><a href="order.html">Оформить заказ</a></button>
+                <button class="clear-cart-button">Очистить корзину</button>
+
+            </div>
+        </div>
+
+<div id="addressModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Введите адрес доставки</h2>
+        <input type="text" id="city" placeholder="Город">
+        <input type="text" id="street" placeholder="Улица">
+        <input type="text" id="house" placeholder="Дом">
+        <button onclick="saveAddress()">Сохранить</button>
+    </div>
+</div>
+
+<div id="auth-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" id="close-modal">&times;</button>
+        <div class="tab">
+            <button id="login-tab" class="active">Войти</button>
+            <button id="register-tab">Зарегистрироваться</button>
+        </div>
+        <div id="login-form" class="auth-form">
+            <input type="text" placeholder="Имя пользователя">
+            <input type="password" placeholder="Пароль">
+            <button>Войти</button>
+        </div>
+        <div id="register-form" class="auth-form" style="display: none;">
+            <input type="text" placeholder="Имя пользователя">
+            <input type="email" placeholder="Электронная почта">
+            <input type="password" placeholder="Пароль">
+            <button>Зарегистрироваться</button>
+        </div>
+    </div>
+</div>
+
+        <script src="rest.js"></script>
+    </body>
+    </html>

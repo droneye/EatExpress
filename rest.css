@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 99%;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.maint {
+    margin-top: 50px;
+}
+
+header .logo {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+header input {
+    flex-grow: 1;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+header button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    padding-top: 60px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.restaurant-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.restaurant-header img {
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.restaurant-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.restaurant-header p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dish {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dish h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.dish p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cart {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.add-button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 15px 30px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%;
+}
+
+.add-button:hover {
+    background-color: #ffbb00;
+}
+
+.cart {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+
+.cart-items {
+    margin: 10px 0;
+}
+
+.cart-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.order-button:hover {
+    background-color: #ffbb00;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .modal-content {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+}
+
+.dark-mode .cart {
+    background-color: #191919;
+    color: #ffffff;
+}
+
+.dark-mode .sidebar {
+    background-color: #191919;
+    color: #ffffff;
+}
+
+.dark-mode .sidebar a {
+    background-color: #191919;
+    color: #ffffff;
+}
+
+.dark-mode .sidebar a:hover {
+    background-color: #333333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #ffbb00;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tab button.active {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Делает всю область ссылки кликабельной */
+}
+
+.clear-cart-button {
+    padding: 15px 30px;
+    background-color: #848484;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.clear-cart-button:hover {
+    background-color: #979797;
+}
